@@ -14,21 +14,19 @@ public abstract class Parcel {
         this.sendDay = sendDay;
     }
 
-    public void packageItem(){
-        System.out.printf("Посылка <<%s>> упакована%n",description);
-    };
+    public void packageItem() {
+        System.out.printf("Посылка <<%s>> упакована%n", description);
+    }
 
-    public void deliver(){
-        System.out.printf("Посылка <<%s1>> доставлена по адресу %s2%n",description,deliveryAddress);
-    };
+    public void deliver() {
+        System.out.printf("Посылка <<%s1>> доставлена по адресу %s2%n", description, deliveryAddress);
+    }
 
-    public double calculateDeliveryCost(){
+    public double calculateDeliveryCost() {
         return weight * getBaseRatio();
-    };
-
+    }
 
     abstract int getBaseRatio();
-
 
     public String getDescription() {
         return description;

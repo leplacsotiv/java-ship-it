@@ -1,8 +1,8 @@
 package ru.yandex.practicum.delivery;
 
-public class StandardParcel extends Parcel{
+public class StandardParcel extends Parcel {
 
-    private static final int baseRatio = 2;
+    private static final int BASE_RATIO = 2;
 
     public StandardParcel(String description, double weight, String deliveryAddress, int sendDay) {
         super(description, weight, deliveryAddress, sendDay);
@@ -10,6 +10,6 @@ public class StandardParcel extends Parcel{
 
     @Override
     public int getBaseRatio() {
-        return baseRatio;
+        return BASE_RATIO;
     }
 }

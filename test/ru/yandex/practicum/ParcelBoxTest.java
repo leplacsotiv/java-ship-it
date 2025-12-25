@@ -15,6 +15,7 @@ public class ParcelBoxTest {
     @Test
     public void testAddParcel_BelowMaxWeight() {
         ParcelBox<StandardParcel> box = new ParcelBox<>(10);
+
         boolean added = box.addParcel(createParcel(3));
 
         assertTrue(added, "Посылка должна добавляться, если вес не превышает лимит");

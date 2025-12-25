@@ -1,28 +1,28 @@
 package ru.yandex.practicum.delivery;
 
 
-public class FragileParcel extends Parcel implements Trackable{
+public class FragileParcel extends Parcel implements Trackable {
 
-    private static final int baseRatio = 4;
+    private static final int BASE_RATIO = 4;
 
     public FragileParcel(String description, double weight, String deliveryAddress, int sendDay) {
-        super(description,weight,deliveryAddress,sendDay);
+        super(description, weight, deliveryAddress, sendDay);
     }
 
     @Override
     public void packageItem() {
-        System.out.println(String.format("Посылка <<%s>> обёрнута в защитную плёнку",getDescription()));
+        System.out.println(String.format("Посылка <<%s>> обёрнута в защитную плёнку", getDescription()));
         super.packageItem();
     }
 
     @Override
     public int getBaseRatio() {
-        return baseRatio;
+        return BASE_RATIO;
     }
 
     @Override
     public void reportStatus(String newLocation) {
         System.out.println(String.format("Хрупкая посылка <<%s>> изменила местоположение на %s",
-                getDescription(),newLocation));
+                getDescription(), newLocation));
     }
 }
